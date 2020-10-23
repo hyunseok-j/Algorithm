@@ -2,6 +2,7 @@ package Baekjoon;
 import java.util.*;
 import java.io.*;
 
+
 public class Boj1932 {
     
     public static void main(String[] args) throws IOException{
