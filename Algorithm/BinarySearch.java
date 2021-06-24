@@ -13,26 +13,28 @@ package Algorithm;
 
 public class BinarySearch {
 
-    public static int binarySearch(int[] array, int target, int start, int end){
-        int result = start-1;
+    public static int binarySearch(int[] search_target, int value){
+        
+        int begin = 0;
+        int end = search_target.length-1;
 
-        while(start<=end){
+        while (begin <= end) {
 
-           int mid = (start+end)/2; 
+           int mid = (begin + end) / 2; 
 
-           if(array[mid] == target){
+           if(search_target[mid] == value){
                return mid;
            }
-           else if(array[mid]>target){
+           else if(search_target[mid] > value){
                end = mid-1;
            }
            else{
-               start = mid+1;
+               begin = mid+1;
            }
            
         }
 
-        return result;
+        return -1;
 
     }
 }
